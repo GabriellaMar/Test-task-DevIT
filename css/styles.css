@@ -1,0 +1,124 @@
+/* ----------------Стилі для flex-елементів-----------*/
+.flex-layout{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+
+.header{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.navigation, .footer {
+    border: 2px solid black;
+    padding: 3px;
+}
+
+.content-container {
+    display: flex;
+    width: 300px;
+    text-align: center;
+    min-height: 150px;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.content {
+    width: 70%;
+    padding: 30px 10px;
+    border: 2px solid black;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 30px 10px;
+    border: 2px solid black;
+}
+
+
+/* ----------------Стилі для grid-елементів-----------*/
+
+.grid-layout{
+    display: grid;
+    grid-template-areas:
+    "header "
+    "navigation "
+    "content sidebar"
+    "footer";
+     grid-template-rows: 1fr ;
+     grid-gap: 5px; 
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+   
+}
+
+.grid-container{
+    display: grid; 
+    grid-template-columns: 70% 30%;
+    min-height: 150px; 
+    
+}
+.grid-header{
+    width: 300px;
+    padding: 10px;
+    border: 2px solid black;
+}
+ .grid-navigation, .grid-footer{
+    padding: 3px;
+    border: 2px solid black;
+ }
+
+.grid-content{
+    padding: 30px 10px;
+    border: 2px solid black; 
+    margin-right: 5px;
+}
+
+.grid-sidebar{
+    padding: 30px 10px;
+    border: 2px solid black; 
+}
+
+/* ----------------Стилі для анімованого квадрату-----------*/
+
+.animation-square{
+    animation: 5s linear infinite running rotateAndChangeColor;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+     transform: rotateZ(0deg);
+}
+
+
+@keyframes rotateAndChangeColor {
+    0% {
+        background-color: red;
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        background-color: orange;
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        background-color: green;
+        transform: rotateZ(360deg);
+    }
+
+}
